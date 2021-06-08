@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button1"
+        style="@style/Maintext"
+        android:text="view滑动" />
+
+    <Button
+        android:id="@+id/button2"
+        style="@style/Maintext"
+        android:text="Text" />
+
+    <Button
+        android:id="@+id/button3"
+        style="@style/Maintext"
+        android:text="Test" />
+
+    <Button
+        android:id="@+id/button4"
+        style="@style/Maintext"
+        android:text="ViewGroup" />
+
+    <Button
+        android:id="@+id/button5"
+        style="@style/Maintext"
+        android:text="SquareImageView" />
+
+    <Button
+        android:id="@+id/button6"
+        style="@style/Maintext"
+        android:text="CircleView"
+        />
+
+    <Button
+        android:id="@+id/button7"
+        style="@style/Maintext"
+        android:text="TagLayout"
+        />
+
+
+</LinearLayout>

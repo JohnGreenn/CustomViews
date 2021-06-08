@@ -1,0 +1,49 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+
+        <!--name 自定义View的名字 TextView-->
+        <declare-styleable name="CutomTextView">
+            <!-- name 属性名称
+
+            format 格式: string 文字  color 颜色
+                        dimension 宽高 字体大小  integer 数字
+                        reference 资源（drawable）
+             -->
+            <attr name="peakmainText" format="string"/>
+            <attr name="peakmainTextColor" format="color"/>
+            <attr name="peakmainTextSize" format="dimension"/>
+            <attr name="peakmainMaxLength" format="integer"/>
+            <!-- background 自定义View都是继承自View , 背景是由View管理的-->
+            <!--<attr name="peakmainBackground" format="reference|color"/>-->
+
+            <!-- 枚举 -->
+            <attr name="peakmaininputType">
+                <enum name="number" value="1"/>
+                <enum name="text" value="2"/>
+                <enum name="password" value="3"/>
+            </attr>
+
+        </declare-styleable>
+
+
+    <style name="Maintext">
+        <item name="android:textSize">15sp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+
+
+</resources>
