@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        app:constraintSetStart="@layout/me_layout"
+        app:constraintSetEnd="@layout/me2_layout"
+        app:duration="1000">
+
+        <OnClick
+            app:clickAction="toggle"
+            app:targetId="@id/image" />
+
+    </Transition>
+
+</MotionScene>
