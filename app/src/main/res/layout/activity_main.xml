@@ -72,6 +72,12 @@
                 android:text="LoginMotion"
                 />
 
+            <Button
+                android:id="@+id/button11"
+                style="@style/Maintext"
+                android:text="UserAgreeAnimator"
+                />
+
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>

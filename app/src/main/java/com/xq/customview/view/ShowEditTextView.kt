@@ -7,6 +7,7 @@ import android.graphics.Canvas
 import android.graphics.Paint
 import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatEditText
+import com.xq.customview.R
 import com.xq.customview.others.dp
 
 /**
@@ -29,18 +30,33 @@ class ShowEditTextView(context: Context, attrs: AttributeSet?) : AppCompatEditTe
     private var floatingLabelShown = false
     var floatingLabelFraction = 0f
 
-    set(value) {
-        field = value
-        invalidate()
-    }
+        set(value) {
+            field = value
+            invalidate()
+        }
+
     private val animator by lazy {
         ObjectAnimator.ofFloat(this,"floatingLabelFraction",0f,1f)
     }
+    var useFloatingLabel = false
+        set(value) {
+            if(field != value) {
+                field = value
+                if(field) {
+                    setPadding(paddingLeft, (paddingTop + TEXT_SIZE + TEXT_MARGIN).toInt(), paddingRight, paddingBottom)
+                } else {
+                    setPadding(paddingLeft, (paddingTop - TEXT_SIZE - TEXT_MARGIN).toInt(), paddingRight, paddingBottom)
+                }
+            }
+            invalidate()
+        }
 
     init {
         paint.textSize = TEXT_SIZE
 
-        setPadding(paddingLeft,(paddingTop + TEXT_SIZE + TEXT_MARGIN).toInt(), paddingRight, paddingBottom)
+        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.ShowEditText)
+        useFloatingLabel = typedArray.getBoolean(R.styleable.ShowEditText_useFloatingLabel,true)
+        typedArray.recycle()
     }
 
     override fun onTextChanged(
